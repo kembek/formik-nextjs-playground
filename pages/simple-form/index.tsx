@@ -22,7 +22,8 @@ export default function SimpleForm() {
       <section>
         <Formik
           initialValues={{
-            username: ''
+            username: '',
+            password: ''
           }}
           onSubmit={(values, helpers) => {
             console.log('Loading...');
@@ -38,6 +39,10 @@ export default function SimpleForm() {
               <Form.Group>
                 <Form.Label>Username</Form.Label>
                 <Field name="username" as={Form.Control} />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Password</Form.Label>
+                <Field name="password" as={Form.Control} />
               </Form.Group>
               <div>
                 <Button variant="primary" type="submit" disabled={isSubmitting}>
