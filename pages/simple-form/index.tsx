@@ -1,29 +1,28 @@
-import { Field, Formik } from 'formik';
-import { useRouter } from 'next/router';
+import { Formik } from 'formik';
+import Head from 'next/head';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import * as yup from 'yup';
 
-export default function SimpleForm() {
-  const router = useRouter();
+import { Heading, InputFormik } from '../../components';
 
+const validationSchema = yup.object({
+  username: yup.string().required().min(3).max(20),
+  password: yup.string().required().min(6).max(25),
+});
+
+export default function SimpleForm(): JSX.Element {
   return (
-    <main>
-      <header>
-        <Button
-          variant="light"
-          onClick={() => {
-            router.push('/');
-          }}
-        >
-          Back to home
-        </Button>
-        <h1>Simple form page</h1>
-      </header>
+    <main className="container">
+      <Head>
+        <title>Example of simple form</title>
+      </Head>
+      <Heading text="Back to home" />
       <section>
         <Formik
           initialValues={{
             username: '',
-            password: ''
+            password: '',
           }}
           onSubmit={(values, helpers) => {
             console.log('Loading...');
@@ -33,17 +32,20 @@ export default function SimpleForm() {
               console.log('Data', values);
             }, 3000);
           }}
+          validationSchema={validationSchema}
         >
-          {({ values, handleSubmit, handleReset, isSubmitting }) => (
-            <Form onSubmit={handleSubmit} onReset={handleReset}>
-              <Form.Group>
-                <Form.Label>Username</Form.Label>
-                <Field name="username" as={Form.Control} />
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Password</Form.Label>
-                <Field name="password" as={Form.Control} />
-              </Form.Group>
+          {({ isSubmitting, handleReset, handleSubmit }) => (
+            <Form onReset={handleReset} onSubmit={handleSubmit}>
+              <InputFormik name="username" label="Username" placeholder="Input username" aria-describedby="username-error" aria-required />
+              <InputFormik
+                name="password"
+                label="Password"
+                type="password"
+                placeholder="Input password"
+                aria-describedby="password-error"
+                aria-required
+              />
+
               <div>
                 <Button variant="primary" type="submit" disabled={isSubmitting}>
                   Submit
@@ -52,7 +54,6 @@ export default function SimpleForm() {
                   Reset
                 </Button>
               </div>
-              <pre>{JSON.stringify(values, null, 2)}</pre>
             </Form>
           )}
         </Formik>

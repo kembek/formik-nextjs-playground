@@ -7,28 +7,28 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Home page</title>
       </Head>
 
-      <main className={styles.main}>
+      <main id="content" className={styles.main}>
         <h1 className={styles.title}>Formik cardio</h1>
         <p className={styles.description}>This project is for list of examples of forms.</p>
+        <p className={styles.description}>
+          <i>Shortcut to toggle the Google chrome reader:</i> <code>SHIFT+ALT+A+A</code>
+        </p>
 
         <div>
           <p>List of example</p>
-          <ul>
+          <ul role="listbox" aria-label="List of links for navigation in the site">
             <li>
               <Link href="/simple-form">
                 <a>Simple form</a>
               </Link>
             </li>
             <li>
-              <del>
-                <Link href="#">
-                  <a>Validations (build-in, custom, async, validation), patterns, descriptions</a>
-                </Link>
-              </del>
+              <Link href="/usual-form">
+                <a>Usual form with validations (build-in, custom, async, validation), patterns, descriptions</a>
+              </Link>
             </li>
             <li>
               <del>
