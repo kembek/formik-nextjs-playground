@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import * as yup from 'yup';
 
 import { CheckboxesFormik, CheckboxFormik, Heading, InputFormik, SelectFormik } from '../../../components';
+import { Main } from '../../../layout';
 
 const LIST_OF_PAYMENT_METHODS = ['Cash', 'Visa', 'Mastercard'];
 

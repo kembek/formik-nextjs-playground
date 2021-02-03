@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import { TODO } from '../components';
-import { CONTENT_ID, Main } from '../layout';
+import { Main } from '../layout';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {

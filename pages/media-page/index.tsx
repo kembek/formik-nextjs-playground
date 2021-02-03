@@ -58,7 +58,7 @@ export default function MediaPage() {
             <source src="count_from_1_to_4.mp3" type="audio/mpeg" />
             <track kind="captions" src="/count_from_1_to_4.vtt" srcLang="en" label="English" />
           </audio>
-          <button type="button" onClick={toggleHiddenDescription}>
+          <button type="button" className="btn btn-outline-secondary" onClick={toggleHiddenDescription}>
             {hiddenDescription ? (
               <img src="./visibility_black.png" alt="Show descriptions" />
             ) : (

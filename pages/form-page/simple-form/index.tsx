@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import * as yup from 'yup';
 
 import { Heading, InputFormik } from '../../../components';
+import { Main } from '../../../layout';
 
 const validationSchema = yup.object({
   username: yup.string().required().min(3).max(20),

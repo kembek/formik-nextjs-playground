@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Main } from '../../layout';
 
+import { Main } from '../../layout';
 import styles from '../../styles/Home.module.css';
 
 const PARENT_PATH = '/form-page';
