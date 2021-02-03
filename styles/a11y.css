@@ -1,0 +1,32 @@
+.screenreader-text {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+}
+.screenreader-text:focus {
+  color: black;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  top: auto;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  white-space: nowrap;
+}
