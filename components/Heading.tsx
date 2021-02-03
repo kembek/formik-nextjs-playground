@@ -3,14 +3,15 @@ import Button from 'react-bootstrap/Button';
 
 type HeadingProps = {
   text: string;
-};
+} & React.HTMLAttributes<HTMLElement>;
 
-export function Heading({ text }: HeadingProps): JSX.Element {
+export const Heading: React.FC<HeadingProps> = ({ text, children }: HeadingProps) => {
   const router = useRouter();
 
   return (
-    <header>
+    <header className="header">
       <Button
+        className="header__button"
         variant="light"
         onClick={() => {
           router.push('/');
@@ -18,7 +19,7 @@ export function Heading({ text }: HeadingProps): JSX.Element {
       >
         Back to home
       </Button>
-      <h1>{text}</h1>
+      {children || <h1 className="header__heading">{text}</h1>}
     </header>
   );
-}
+};

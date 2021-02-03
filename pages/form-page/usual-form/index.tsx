@@ -29,7 +29,7 @@ function generateId(): number {
 
 export default function UsualForm(): JSX.Element {
   return (
-    <main className="container">
+    <Main className="container">
       <Head>
         <title>Example of usual form</title>
       </Head>
@@ -140,6 +140,6 @@ export default function UsualForm(): JSX.Element {
           )}
         </Formik>
       </section>
-    </main>
+    </Main>
   );
 }

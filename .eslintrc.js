@@ -5,17 +5,17 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   plugins: ['simple-import-sort'],
   extends: [
@@ -25,7 +25,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
     'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   rules: {
     'prettier/prettier': 'error',
@@ -39,8 +39,8 @@ module.exports = {
       {
         components: ['Link'],
         specialLink: ['hrefLeft', 'hrefRight'],
-        aspects: ['invalidHref', 'preferButton']
-      }
-    ]
-  }
+        aspects: ['invalidHref', 'preferButton'],
+      },
+    ],
+  },
 };

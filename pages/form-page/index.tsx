@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { Main } from '../../layout';
 
 import styles from '../../styles/Home.module.css';
 
@@ -7,12 +8,12 @@ const PARENT_PATH = '/form-page';
 
 export default function FormPage() {
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Head>
         <title>Form page</title>
       </Head>
 
-      <main id="content" className={styles.main}>
+      <Main className={styles.main}>
         <h1 className={styles.title}>Form page</h1>
         <p className={styles.description}>This project is for list of examples of forms.</p>
         <p className={styles.description}>
@@ -55,7 +56,7 @@ export default function FormPage() {
             </li>
           </ul>
         </div>
-      </main>
+      </Main>
     </div>
   );
 }

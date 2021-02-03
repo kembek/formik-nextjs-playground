@@ -13,7 +13,7 @@ const validationSchema = yup.object({
 
 export default function SimpleForm(): JSX.Element {
   return (
-    <main className="container">
+    <Main className="container">
       <Head>
         <title>Example of simple form</title>
       </Head>
@@ -58,6 +58,6 @@ export default function SimpleForm(): JSX.Element {
           )}
         </Formik>
       </section>
-    </main>
+    </Main>
   );
 }
