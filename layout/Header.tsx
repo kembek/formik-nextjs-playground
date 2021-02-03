@@ -1,9 +1,11 @@
 import Link from 'next/link';
 
-export function Header() {
+export const CONTENT_ID = 'content';
+
+export const Header: React.FC = () => {
   return (
     <>
-      <a href="#content" className="screenreader-text" title="Skip to content">
+      <a href={`#${CONTENT_ID}`} className="screenreader-text" title="Skip to content">
         Skip to content
       </a>
       <header>
@@ -34,4 +36,4 @@ export function Header() {
       </header>
     </>
   );
-}
+};
