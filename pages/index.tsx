@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import { TODO } from '../components';
 
 import styles from '../styles/Home.module.css';
 
@@ -11,48 +11,12 @@ export default function Home() {
       </Head>
 
       <main id="content" className={styles.main}>
-        <h1 className={styles.title}>Formik cardio</h1>
-        <p className={styles.description}>This project is for list of examples of forms.</p>
-        <p className={styles.description}>
-          <i>Shortcut to toggle the Google chrome reader:</i> <code>SHIFT+ALT+A+A</code>
+        <h1 className={styles.title}>Home page</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam mollitia quia laboriosam dicta accusamus culpa tenetur illo
+          officia excepturi. Autem mollitia asperiores voluptatem fuga eum, iusto molestiae? Beatae, doloremque? Asperiores.
         </p>
-
-        <div>
-          <p>List of example</p>
-          <ul role="listbox" aria-label="List of links for navigation in the site">
-            <li>
-              <Link href="/simple-form">
-                <a>Simple form</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/usual-form">
-                <a>Usual form with validations (build-in, custom, async, validation), patterns, descriptions</a>
-              </Link>
-            </li>
-            <li>
-              <del>
-                <Link href="#">
-                  <a>Uploading files</a>
-                </Link>
-              </del>
-            </li>
-            <li>
-              <del>
-                <Link href="#">
-                  <a>Stepper added</a>
-                </Link>
-              </del>
-            </li>
-            <li>
-              <del>
-                <Link href="#">
-                  <a>i18n</a>
-                </Link>
-              </del>
-            </li>
-          </ul>
-        </div>
+        <TODO text="Add a content" />
       </main>
     </div>
   );

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import { TODO } from '../../components';
 
 export default function MediaPage() {

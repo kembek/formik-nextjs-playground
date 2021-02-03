@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import * as yup from 'yup';
 
-import { Heading, InputFormik } from '../../components';
+import { Heading, InputFormik } from '../../../components';
 
 const validationSchema = yup.object({
   username: yup.string().required().min(3).max(20),
